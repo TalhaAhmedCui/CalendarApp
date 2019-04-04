@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": null,
-  "packagerPid": null,
+  "packagerPort": 19001,
+  "packagerPid": 5554,
   "expoServerNgrokUrl": "https://9x-vmv.anonymous.calendarrn.exp.direct",
   "packagerNgrokUrl": "https://packager.9x-vmv.anonymous.calendarrn.exp.direct",
-  "ngrokPid": 5316
+  "ngrokPid": 5571
 }
