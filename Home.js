@@ -60,7 +60,7 @@ class Home extends Component {
             endDate={moment(item.end.dateTime).format("DD.MM.YYYY h:mm")}
             id={item.id}
             email={email}
-            accessToken={token}
+            token={token}
           />
         ))}
       </ScrollView>
