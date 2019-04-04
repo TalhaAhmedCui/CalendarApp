@@ -39,7 +39,7 @@ class Login extends React.Component {
           accessToken: result.accessToken
         });
 
-        console.log(result);
+        console.log(result.accessToken);
       } else {
         console.log("cancelled");
       }

@@ -17,5 +17,13 @@ export const styles = StyleSheet.create({
     borderColor: "rgba(0,0,0,0.2)",
     borderWidth: 3,
     borderRadius: 150
+  },
+  actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: "white"
+  },
+  spinnerTextStyle: {
+    color: "#FFF"
   }
 });

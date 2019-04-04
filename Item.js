@@ -5,9 +5,12 @@ import { Card } from "react-native-elements";
 import axios from "axios";
 
 class Item extends Component {
-  deleteMe = () => {
-    //axios.delete("");
-  };
+  deleteMe() {
+    const { email, token, id } = this.props;
+    axios.delete(
+      `https://www.googleapis.com/calendar/v3/calendars/${email}/events/${id}?access_token=${token}`
+    );
+  }
 
   render() {
     const { id, summary, startDate, endDate } = this.props;
