@@ -1,8 +1,8 @@
 import React from "react";
-import { Text, View, Image, Button } from "react-native";
+import { Text, View, Button } from "react-native";
 import { Google } from "expo";
 import { styles } from "./styles";
-import Home from "./Home";
+import { CLIENT_ID } from "./config";
 
 class Login extends React.Component {
   static navigationOptions = {
@@ -20,8 +20,7 @@ class Login extends React.Component {
   signIn = async () => {
     try {
       const result = await Google.logInAsync({
-        androidClientId:
-          "128201743195-sgj0qjf1ofejmk02n39avukpb67gu2ja.apps.googleusercontent.com",
+        androidClientId: CLIENT_ID,
         //iosClientId: YOUR_CLIENT_ID_HERE,  <-- if you use iOS
         scopes: [
           "profile",
