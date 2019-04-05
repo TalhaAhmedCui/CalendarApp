@@ -17,6 +17,7 @@
     "react-native-datepicker": "^1.7.2",
     "react-native-elements": "^1.1.0",
     "react-native-loading-spinner-overlay": "^1.0.1",
+    "react-native-popup-dialog": "^0.18.2",
     "react-navigation": "^3.6.1"
   },
   "devDependencies": {

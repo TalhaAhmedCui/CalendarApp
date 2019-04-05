@@ -14,11 +14,15 @@ class Home extends Component {
 
   state = { items: [] };
 
-  async componentDidMount() {
+  componentDidMount() {
     const { navigation } = this.props;
     const token = navigation.getParam("accessToken");
     const email = navigation.getParam("email");
 
+    this.loadData(token, email);
+  }
+
+  loadData = async (token, email) => {
     const resp = await axios.get(
       `https://www.googleapis.com/calendar/v3/calendars/${email}/events?access_token=${token}`
     );
@@ -26,7 +30,7 @@ class Home extends Component {
     this.setState({
       items: resp.data.items
     });
-  }
+  };
 
   create() {
     const { navigation } = this.props;
@@ -61,6 +65,7 @@ class Home extends Component {
             id={item.id}
             email={email}
             token={token}
+            loadData={this.loadData}
           />
         ))}
       </ScrollView>
