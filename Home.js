@@ -4,12 +4,14 @@ import { styles } from "./styles";
 import axios from "axios";
 import Item from "./Item";
 import Spinner from "react-native-loading-spinner-overlay";
+import { NavigationEvents } from "react-navigation";
 
 const moment = require("moment");
 
 class Home extends Component {
   static navigationOptions = {
-    title: "Calendar"
+    headerTitle: "Calendar",
+    headerLeft: null
   };
 
   state = { items: [] };
@@ -32,7 +34,7 @@ class Home extends Component {
     });
   };
 
-  create() {
+  create = () => {
     const { navigation } = this.props;
     const token = navigation.getParam("accessToken");
     const email = navigation.getParam("email");
@@ -40,7 +42,7 @@ class Home extends Component {
       accessToken: token,
       email
     });
-  }
+  };
 
   render() {
     const { navigation } = this.props;
@@ -49,8 +51,7 @@ class Home extends Component {
 
     return (
       <ScrollView>
-        <Button title="Create" onPress={() => this.create()} />
-
+        <Button title="Create" onPress={this.create} />
         <Spinner
           visible={this.state.items.length === 0}
           textContent={"Loading..."}

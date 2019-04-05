@@ -6,7 +6,8 @@ import { CLIENT_ID } from "./config";
 
 class Login extends React.Component {
   static navigationOptions = {
-    title: "Login"
+    title: "Login",
+    headerLeft: null
   };
 
   state = {
